@@ -14,14 +14,16 @@
 }
 
 header {
-    height: 100vh;
+    position: relative;
+    height: 120vh;
     background-image: url("../../images/calendarnav.jpg");
     background-attachment: fixed;
     background-size: cover;
     background-position: center right;
 }
 
-header h1 {
+header h1,
+header h2 {
     padding: 15px;
     background-color: rgba(0, 0, 0, 0.4);
     text-align: center;
@@ -31,29 +33,36 @@ header h1 {
     text-transform: uppercase;
 }
 
+header h2 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
 .formAndCalendarContainer {
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
     max-width: 1920px;
     margin: 30px auto;
 }
 
 .form {
-    float: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 0 50px;
-    width: 40%;
     font-size: 28px;
 }
 
-.form h1 {
-    padding: 25px 0 40px;
-    text-align: center;
-    font-size: 35px;
-    font-family: 'Saira Semi Condensed', sans-serif;
-    text-transform: uppercase;
+.form label {
+    margin-right: 40px;
 }
 
 .form input {
     margin: 10px auto 20px;
-    width: 60%;
+    width: 100%;
     height: 35px;
 }
 
@@ -65,10 +74,8 @@ header h1 {
 }
 
 #container {
-    float: right;
     padding: 5px;
     border: 5px solid #30336b;
-    width: 60%;
 }
 
 button {
@@ -179,7 +186,7 @@ button {
     font-family: sans-serif;
 }
 
-h2 {
+h3 {
     margin-bottom: 5px;
     border: 1px solid #30336b;
     background-color: #f5f6fa;
@@ -205,15 +212,21 @@ h2 {
 }
 
 #cancelButton,
-#closeButton {
+#closeButton,
+.inputCancel {
     border: 1px solid #be2edd;
     background-color: #e8f4fa;
     color: #be2edd;
 }
 
-#saveButton {
+#saveButton,
+.inputSave {
     background-color: #be2edd;
     color: white;
+}
+
+.warn {
+    color: #f4002d;
 }
 
 #deleteButton {

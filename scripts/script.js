@@ -8,6 +8,11 @@ const deleteEventModal = document.getElementById('deleteEventModal');
 const backDrop = document.getElementById('modalBackDrop');
 const eventTitleInput = document.getElementById('eventTitleInput');
 const weekdays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+const eventName = document.querySelector('.eventName')
+const eventPlace = document.querySelector('.eventPlace')
+const eventTime = document.querySelector('.eventTime')
+const warn = document.querySelector('.warn')
+const inputConfirm = document.querySelector('.inputSave')
 
 function openModal(date) {
     clicked = date;
@@ -36,7 +41,7 @@ function load() {
     const day = dt.getDate();
     const month = dt.getMonth();
     const year = dt.getFullYear();
-
+    dt.getMonth() < 10 ? eventTime.value = `${year}-0${month + 1}-${day}` : eventTime.value = `${year}-${month + 1}-${day}`
     const firstDayOfMonth = new Date(year, month, 1);
     const daysInMonth = new Date(year, month + 1, 0).getDate();
 
@@ -85,7 +90,7 @@ function load() {
         calendar.appendChild(daySquare);
     }
 
-    console.log(paddingDays);
+    // console.log(paddingDays);
 }
 
 function closeModal() {
@@ -120,6 +125,34 @@ function deleteEvent() {
     closeModal();
 };
 
+function addEventByInput() {
+    inputName = eventName.value;
+    inputPlace = eventPlace.value;
+    inputTime = eventTime.value;
+
+    const myDate = inputTime.split('-')
+    const mapDate = myDate.map(x => parseInt(x));
+    const DATE_TO_JSON = `${mapDate[1]}/${mapDate[2]}/${mapDate[0]}`
+
+    if (inputName != '' && inputPlace != '') {
+        warn.textContent = ""
+
+        events.push({
+            date: DATE_TO_JSON,
+            title: inputName + ' ' + inputPlace,
+        });
+        load()
+
+        localStorage.setItem('events', JSON.stringify(events));
+    } else {
+        warn.textContent = "Uzupełnij wszystkie pola!!!"
+    }
+
+}
+
+function dupa() {
+    console.log('dawdadawd');
+}
 
 function initButtons() {
     document.getElementById('nextButton').addEventListener('click', () => {
@@ -136,6 +169,7 @@ function initButtons() {
     document.getElementById('cancelButton').addEventListener('click', closeModal);
     document.getElementById('deleteButton').addEventListener('click', deleteEvent);
     document.getElementById('closeButton').addEventListener('click', closeModal);
+    inputConfirm.addEventListener('click', addEventByInput)
 }
 
 initButtons();

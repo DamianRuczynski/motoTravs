@@ -15,19 +15,19 @@
 
     <header>
         <h1>MOTOTRAVELL</h1>
+        <h2>Zaplanuj wyjazd!</h2>
     </header>
 
-    <div class="formAndCalendarContainer clearfix">
+    <div class="formAndCalendarContainer">
 
         <div class="form">
-            <h1>Zaplanuj wyjazd!</h1>
-            <label for="">Nazwa wydarzenia<br><input type="text"></label><br>
-            <label for="">Miejsce zbiórki<br><input type="text"></label><br>
-            <label for="">Wybierz termin<br><input type="date"></label><br>
+            <label for="">Nazwa wydarzenia<br><input type="text" class="eventName"></label>
+            <label for="">Miejsce zbiórki<br><input type="text" class="eventPlace"></label>
+            <label for="">Wybierz termin<br><input type="date" value="2018-07-22" class="eventTime"></label>
 
-            <button id="saveButton">Save</button>
-            <button id="cancelButton">Cancel</button>
+            <button class="inputSave">Save</button>
         </div>
+        <p class="warn"></p>
 
         <div id="container">
             <div id="header">
@@ -52,7 +52,7 @@
         </div>
 
         <div id="newEventModal">
-            <h2>New Event</h2>
+            <h3>New Event</h3>
 
             <input id="eventTitleInput" type="text" placeholder="Event Title">
 
@@ -61,7 +61,7 @@
         </div>
 
         <div id="deleteEventModal">
-            <h2>Event</h2>
+            <h3>Event</h3>
 
             <p id="eventText"></p>
 
