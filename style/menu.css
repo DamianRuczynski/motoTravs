@@ -501,18 +501,3 @@ font-family: 'Saira Semi Condensed', sans-serif;*/
             background-color: #fff;
         }
     }
-
-    /* FOOTER */
-
-    footer {
-        background-color: #29a6dc;
-        color: white;
-        font-family: saira, sans-serif;
-        text-align: center;
-        padding: 20px;
-        font-size: 20px;
-    }
-
-    footer span {
-        font-family: sans-serif;
-    }

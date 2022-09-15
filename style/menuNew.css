@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+h1 {
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.4);
+    text-align: center;
+    color: white;
+    font-size: 35px;
+    font-family: 'Saira Semi Condensed', sans-serif;
+    text-transform: uppercase;
+}
+
+/*HEADER*/
+
+header {
+    height: 100vh;
+    background-image: url("../images/nav.jpg");
+    background-attachment: fixed;
+    background-position: center right;
+    background-size: cover;
+}
+
+header+h1 {
+    background-color: #fff;
+    color: #000;
+    margin-bottom: 15px;
+}
+
+/* SECTION */
+
+section {
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row wrap;
+    max-width: 1920px;
+}
+
+section .offer {
+    width: 40vw;
+    min-width: 600px;
+    height: 40vh;
+    min-height: 300px;
+    margin-bottom: 50px;
+    background-position: center right;
+    background-size: cover;
+}
+
+section .offer:nth-of-type(1) {
+    background-image: url("../images/offer.jpg");
+}
+
+section .offer:nth-of-type(2) {
+    background-image: url("../images/offer2.jpg");
+}
+
+section .offer:nth-of-type(3) {
+    background-image: url("../images/offer3.jpg");
+}
+
+section .offer:nth-of-type(4) {
+    background-image: url("../images/offer4.jpg");
+}
+
+
+section a {
+    display: block;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    line-height: 40vh;
+    min-height: 300px;
+    font-family: 'Saira', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    cursor: default;
+    opacity: 0;
+    transition: .7s;
+}
+
+section a:hover {
+    opacity: 1;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: #29a6dc;
+    color: white;
+    font-family: saira, sans-serif;
+    text-align: center;
+    padding: 20px;
+    font-size: 20px;
+}
+
+footer span {
+    font-family: sans-serif;
+}
