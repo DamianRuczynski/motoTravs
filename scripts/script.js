@@ -41,7 +41,10 @@ function load() {
     const day = dt.getDate();
     const month = dt.getMonth();
     const year = dt.getFullYear();
-    dt.getMonth() < 10 ? eventTime.value = `${year}-0${month + 1}-${day}` : eventTime.value = `${year}-${month + 1}-${day}`
+    dt.getMonth() < 9 ? eventTime.value = `${year}-0${month + 1}-${day}` : eventTime.value = `${year}-${month + 1}-${day}`
+    // dt.getMonth() === 10 ? console.log('chuj') : console.log('teraz nie jest 10');
+
+    console.log(dt.getMonth());
     const firstDayOfMonth = new Date(year, month, 1);
     const daysInMonth = new Date(year, month + 1, 0).getDate();
 
@@ -149,11 +152,6 @@ function addEventByInput() {
     }
 
 }
-
-function dupa() {
-    console.log('dawdadawd');
-}
-
 function initButtons() {
     document.getElementById('nextButton').addEventListener('click', () => {
         nav++;
