@@ -16,7 +16,7 @@
 header {
     position: relative;
     height: 120vh;
-    background-image: url("../../images/calendarnav.jpg");
+    background-image: url("../../images/backgrounds/calendarnav.jpg");
     background-attachment: fixed;
     background-size: cover;
     background-position: center right;

@@ -33,7 +33,7 @@ h1 {
 
 header {
     height: 100vh;
-    background-image: url("../images/nav.jpg");
+    background-image: url("../images/backgrounds/nav.jpg");
     background-attachment: fixed;
     background-position: center right;
     background-size: cover;
@@ -71,19 +71,19 @@ section .offer {
 }
 
 section .offer:nth-of-type(1) {
-    background-image: url("../images/offer.jpg");
+    background-image: url("../images/mainPagePhotos/offer.jpg");
 }
 
 section .offer:nth-of-type(2) {
-    background-image: url("../images/offer2.jpg");
+    background-image: url("../images/mainPagePhotos/offer2.jpg");
 }
 
 section .offer:nth-of-type(3) {
-    background-image: url("../images/offer3.jpg");
+    background-image: url("../images/mainPagePhotos/offer3.jpg");
 }
 
 section .offer:nth-of-type(4) {
-    background-image: url("../images/offer4.jpg");
+    background-image: url("../images/mainPagePhotos/offer4.jpg");
 }
 
 
@@ -195,7 +195,7 @@ section a:hover {
 
 .contact .wrap {
     padding-top: 20px;
-    max-width: 1024px;
+    max-width: 1280px;
     margin: 0 auto;
 }
 
