@@ -151,6 +151,8 @@ function addEventByInput() {
         warn.textContent = "Uzupełnij wszystkie pola!!!"
     }
 
+    eventName.value = '';
+    eventPlace.value = '';
 }
 function initButtons() {
     document.getElementById('nextButton').addEventListener('click', () => {
