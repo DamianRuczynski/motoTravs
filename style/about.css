@@ -21,7 +21,6 @@ main {
     display: flex;
     justify-content: center;
     flex-flow: wrap;
-    width: 100vw;
     max-width: 1920px;
     background-color: #eee;
 }
@@ -39,19 +38,20 @@ h1 {
     font-weight: 600;
 }
 
-.ceos {
+.ceos,
+.drivers {
     position: relative;
     display: flex;
     justify-content: center;
     flex-flow: wrap;
     margin: 5vh;
-    max-height: 90vh;
-    width: 50%;
+    width: 80%;
 }
 
-.ceos h2 {
+h2 {
     width: 100%;
     text-align: center;
+    text-transform: uppercase;
     font-size: 4.5rem;
     font-weight: 600;
 }
@@ -69,7 +69,7 @@ h1 {
     transition: .7s;
 }
 
-.profile:hover {
+.ceos .profile:hover {
     height: 600px;
     width: 450px;
 }
@@ -98,4 +98,27 @@ h1 {
     right: 15%;
     font-size: 1.5rem;
     font-weight: 100;
+}
+
+.drivers .profile {
+    height: 300px;
+    width: 200px;
+}
+
+.drivers .profile:hover {
+    height: 400px;
+    width: 300px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    font-family: saira, sans-serif;
+    text-align: center;
+    padding: 20px;
+    font-size: 20px;
+}
+
+footer span {
+    font-family: sans-serif;
 }

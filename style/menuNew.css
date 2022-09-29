@@ -53,7 +53,7 @@ section.about {
     flex-flow: row wrap;
     margin: 0 auto;
     max-width: 1920px;
-    width: 100vw;
+    /* width: 100vw; */
 }
 
 section .offer {
@@ -117,8 +117,8 @@ section a:hover {
 .container {
     margin: 0 auto;
     padding: 10px;
-    width: 100vw;
-    background-image: url(../images/travels.jpg);
+    /* width: 100vw; */
+    background-image: url(../images/backgrounds/travels.jpg);
     background-position: center;
     background-size: cover;
 }
