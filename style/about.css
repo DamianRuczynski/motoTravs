@@ -25,6 +25,24 @@ main {
     background-color: #eee;
 }
 
+a.backToMain {
+    position: fixed;
+    top: 2vh;
+    left: 2vw;
+    display: block;
+    width: 5vw;
+    height: 5vh;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+a.backToMain i {
+    line-height: 5vh;
+    font-size: 3.5rem;
+    color: white
+}
+
 h1 {
     display: block;
     width: 100%;
@@ -121,4 +139,18 @@ footer {
 
 footer span {
     font-family: sans-serif;
+}
+
+@media(max-width: 1000px) {
+
+    .profile {
+        pointer-events: none;
+    }
+}
+
+@media(max-width: 500px) {
+
+    a.backToMain {
+        top: 10vh;
+    }
 }
